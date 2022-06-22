@@ -10,12 +10,14 @@ export const App = () => {
     const newData = data.filter(item => item.id !== deleteId); 
     setData(newData); 
   }
-  
+  const handleEditDataApp = (editData) => {
+    console.log('We have to edit the data here');
+  }
   return (
   <section className='wrapper'>
     { data.map((user)=>{
          return(
-            <Card key={user.id} {...user} handleDeleteApp = {handleDeleteDataApp}></Card>
+            <Card key={user.id} {...user} handleDeleteApp = {handleDeleteDataApp} handleEditDataApp = {handleEditDataApp}></Card>
          )
           })
     }

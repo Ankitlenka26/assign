@@ -11,6 +11,9 @@ const Card = (props) => {
     const handleDeleteDataCard = (id) => {
         return props.handleDeleteApp(id); 
     }
+    const handleEditDataCard = (editData) => {
+        return props.handleEditDataApp(editData);
+    }
     return(
          <div className='card'>
             <img className="card_img" src={props.image}/>
@@ -19,7 +22,7 @@ const Card = (props) => {
                <div className="icon_data"><AiOutlineMail/> <p className='user_details'>{props.email}</p></div>
                    <div className="icon_data">  <AiOutlinePhone></AiOutlinePhone> <p className='user_details'>{props.contact}</p></div>
                        <div className="icon_data"> <BsGlobe></BsGlobe> <p className='user_details'>{props.company}</p></div>
-                <Bottom data={props} handleDelete = {handleDeleteDataCard}/>
+                <Bottom data={props} handleDelete = {handleDeleteDataCard} handleEditDataCard = {handleEditDataCard}/>
 
             </div>
             </div>
